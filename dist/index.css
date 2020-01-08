@@ -1,0 +1,192 @@
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.set-date {
+  pointer-events: auto;
+}
+#content {
+  padding: 0 5rem 0 5rem;
+}
+.times {
+  padding: 0;
+}
+
+rect {
+  height: 16px !important;
+}
+.time {
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0.25rem 0 0.25rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  list-style: none;
+  color: #3f4850;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s ease-in-out;
+}
+.time svg {
+  padding: 0 0.5rem 0 0;
+  margin: 0;
+}
+.date-tag {
+  background-color: #c0cad3;
+  font-size: 11px;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  padding: 0.25rem;
+  transition: all 0.25s ease-in-out;
+}
+.date-tag:hover {
+  background-color: #c0cad3;
+}
+.time:hover {
+  background-color: #cacfd4;
+  color: rgb(31, 34, 39);
+}
+.project {
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0.25rem 0 0.25rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  list-style: none;
+  color: #3f4850;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s ease-in-out;
+}
+.project:hover {
+  background-color: #cacfd4;
+  color: rgb(31, 34, 39);
+}
+.project svg {
+  padding: 0 0.5rem 0 0;
+  margin: 0;
+}
+.add-project-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+}
+
+span[hidden="true"] {
+  display: none;
+}
+.expand {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  border-radius: 999px;
+  padding: 0.25rem;
+}
+.expand:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.add-project {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.todo-add-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+}
+.add-todo {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.todos {
+  margin: 1rem;
+  padding: 0;
+}
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.todo {
+  list-style: none;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 3px;
+  transition: all 0.15s ease-in-out;
+}
+.todo:hover {
+  background-color: rgba(33, 48, 54, 0.2);
+}
+.todo:not([expanded]) .more-info {
+  display: none;
+}
+.todo[expanded] .more-info {
+  display: block;
+}
+p[strike="true"] {
+  text-decoration: line-through;
+}
+p[strike="false"] {
+  text-decoration: none;
+}
+.todo input {
+  margin-right: 0.75rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #sidebar {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-right: 1px solid #cacfd4;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #sidebar {
+    width: 25%;
+    height: 100%;
+  }
+  #content {
+    width: 73%;
+    height: 100%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
